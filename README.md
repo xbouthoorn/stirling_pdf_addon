@@ -1,18 +1,23 @@
-# Stirling PDF
+# Stirling PDF Home Assistant Add-on
 
-This add-on provides a locally hosted web-based PDF management tool that allows you to merge, split, and convert PDF files.
+## Description
+Stirling PDF is a locally hosted web application for various PDF operations. This add-on allows you to run Stirling PDF directly within your Home Assistant instance.
 
 ## Installation
 
-1. Add the `Stirling PDF Add-ons` repository in Home Assistant.
-2. Install the Stirling PDF add-on from the repository.
-3. Start the add-on, and access it through the Home Assistant web interface.
+1. Add this repository to your Home Assistant add-ons:
+   - Go to **Settings > Add-ons > Add-on Store**
+   - Click on the three-dot menu in the top right and select **Repositories**
+   - Add the URL of this GitHub repository
 
-## Usage
+2. Install the `Stirling PDF` add-on from the list of available add-ons.
 
-After installation, access Stirling PDF at:
-`http://your-home-assistant-ip:8080`
+3. Configure and start the add-on.
+
+4. Access the web UI at `http://<home_assistant_ip>:8080`.
 
 ## Configuration
-
 No additional configuration options are required.
+
+## Port
+The application runs on port `8080`.
