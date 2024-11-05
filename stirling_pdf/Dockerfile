@@ -1,5 +1,12 @@
-# Use the official Stirling-PDF image
-FROM stirlingpdf/stirling-pdf:latest
+ARG BUILD_FROM
+FROM frooodle/s-pdf:latest
 
-# Expose the application port for Home Assistant
+# Expose the application port
 EXPOSE 8080
+
+# Copy the run script
+COPY run.sh /run.sh
+RUN chmod a+x /run.sh
+
+# Set the default command
+CMD [ "/run.sh" ]
