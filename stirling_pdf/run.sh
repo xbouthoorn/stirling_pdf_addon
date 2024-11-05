@@ -1,2 +1,3 @@
 #!/bin/sh
-exec stirling-pdf --host 0.0.0.0 --port 8080
+exec java -Dfile.encoding=UTF-8 -jar /app.jar
+
