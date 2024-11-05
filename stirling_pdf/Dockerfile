@@ -1,8 +1,14 @@
-# Use the frooodle/s-pdf image directly
 FROM frooodle/s-pdf:latest
 
-# Expose the application port used by Stirling-PDF
-EXPOSE 8080
+# Install Tini
+RUN apk add --no-cache tini
 
-# Use the existing entrypoint from the base image
-CMD []
+# Copy the run.sh script
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
+
+# Use Tini as the entrypoint
+ENTRYPOINT ["/sbin/tini", "--"]
+
+# Set the default command
+CMD ["/run.sh"]
