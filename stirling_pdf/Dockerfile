@@ -1,12 +1,8 @@
-ARG BUILD_FROM
+# Use the frooodle/s-pdf image directly
 FROM frooodle/s-pdf:latest
 
-# Expose the application port
+# Expose the application port used by Stirling-PDF
 EXPOSE 8080
 
-# Copy the run script
-COPY run.sh /run.sh
-RUN chmod a+x /run.sh
-
-# Set the default command
-CMD [ "/run.sh" ]
+# Use the existing entrypoint from the base image
+CMD []

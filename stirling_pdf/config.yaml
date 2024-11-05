@@ -1,7 +1,7 @@
-name: Stirling PDF
+name: "Stirling PDF"
 version: "1.0.0"
-slug: stirling_pdf
-description: Locally hosted web application for various PDF operations.
+slug: "stirling_pdf"
+description: "Locally hosted web application for various PDF operations."
 arch:
   - aarch64
   - amd64
