@@ -1,14 +1,15 @@
 # Use the frooodle/s-pdf image as the base
 FROM frooodle/s-pdf:latest
 
-# Install Tini
+# Install Tini to manage processes
 RUN apk add --no-cache tini
 
-# Copy the run.sh script into the container
+# Copy and make the run.sh script executable
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
-ENTRYPOINT ["tini", "--", "/scripts/init.sh"]
+# Use Tini as the entrypoint to handle processes
+ENTRYPOINT ["tini", "--"]
 
-CMD ["java", "-Dfile.encoding=UTF-8", "-jar", "/app.jar"]
-
+# Run Stirling-PDF through the copied run.sh script
+CMD ["/run.sh"]
