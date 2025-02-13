@@ -11,5 +11,8 @@ RUN chmod +x /run.sh
 # Use Tini as the entrypoint to handle processes
 ENTRYPOINT ["tini", "--"]
 
+# Expose ingress port
+EXPOSE 8099
+
 # Run Stirling-PDF through the copied run.sh script
 CMD ["/run.sh"]
